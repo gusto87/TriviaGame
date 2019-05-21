@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="javascript/app.js"></script>
+</head>
+
+<body background="images/now.png" alt="now" height="100px" width="200px">
+
+    <h1>What do you know about the 2000s??!</h1>
+
+
+    <form id="quiz" name="quiz">
+        <p>What was the highest selling game on ps2?</p>
+        <input type="radio" id="mc" name="question1" value="Gran Turismo"> Gran Turismo<br>
+        <input type="radio" id="mc" name="question1" value="GTA San Andreas"> GTA San Andreas<br>
+        <input type="radio" id="mc" name="question1" value="Need For Speed"> Need for Speed<br>
+
+        <p>What year did the iPhone debut?</p>
+        <input type="radio" id="mc" name="question2" value="2007"> 2007<br>
+        <input type="radio" id="mc" name="question2" value="2003"> 2003<br>
+        <input type="radio" id="mc" name="question2" value="2008"> 2008<br>
+
+        <p>What year was Barack Obama elected?</p>
+        <input type="radio" id="mc" name="question3" value="2005"> 2005<br>
+        <input type="radio" id="mc" name="question3" value="2007"> 2007<br>
+        <input type="radio" id="mc" name="question3" value="2008"> 2008<br>
+
+        <p>What year did Hurricane Katrina hit the U.S.?</p>
+        <input type="radio" id="mc" name="question4" value="2007"> 2007<br>
+        <input type="radio" id="mc" name="question4" value="2005"> 2005<br>
+        <input type="radio" id="mc" name="question4" value="2009"> 2009<br>
+
+        <input id="button" type="button" value="I'm frikkin done mane!" onclick="check();">
+
+    </form>
+    <div id="after_submit">
+        <p id="message"></p>
+        <p id="number_correct"></p>
+        <img id="picture">
+    </div>
+
+
+</body>
+
+</html>

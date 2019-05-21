@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#quiz {
+    margin-left: 10px;
+    background: aquamarine;
+    padding: 10px 20px 10px 20px;
+    width: 300px;
+    border-radius: 20px;
+    float: left;
+}
+
+#button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    transition-duration: .5s;
+    margin-top: 10px;
+}
+
+#button:hover {
+    background: palegoldenrod;
+    border: 1px solid green;
+    color: black;
+    cursor: pointer;
+}
+
+#after_submit {
+    visibility: hidden;
+    background: burlywood;
+    padding: 10px 20px 10px 20px;
+    width: 500px;
+    border-radius: 20px;
+    float: left;
+    margin-left: 20px;
+    font-size: 30px;
+
+}
+
+#picture {
+    width: 375px;
+    height: 300px;
+}
+
+#mc {
+    display: inline;
+}
