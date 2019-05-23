@@ -1,3 +1,5 @@
+
+    
 function check() {
 
     var question1 = document.quiz.question1.value;
@@ -5,6 +7,7 @@ function check() {
     var question3 = document.quiz.question3.value;
     var question4 = document.quiz.question4.value;
     var correct = 0;
+    
 
     if (question1 === "GTA San Andreas") {
         correct++;
@@ -25,7 +28,7 @@ function check() {
     if (correct === 0) {
         range = 3;
     }
-    if (correct > 1 && correct < 3) {
+    if (correct > 0 && correct < 3) {
         range = 2;
     }
     if (correct > 2) {
@@ -34,8 +37,17 @@ function check() {
     if (correct > 3 && correct === 4) {
         range = 0;
     }
+   
+        
+    
     document.getElementById("after_submit").style.visibility = "visible";
     document.getElementById("message").innerHTML = messages[range];
     document.getElementById("number_correct").innerHTML = "You got" + correct + "correct.";
     document.getElementById("picture").src = pictures[range]
+}
+    
+function setup(){
+    noCanvas();
+    var count = select('#Timer');
+    count.html('0');
 }
