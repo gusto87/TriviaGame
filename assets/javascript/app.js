@@ -1,5 +1,4 @@
 
-    
 function check() {
 
     var question1 = document.quiz.question1.value;
@@ -45,9 +44,53 @@ function check() {
     document.getElementById("number_correct").innerHTML = "You got" + correct + "correct.";
     document.getElementById("picture").src = pictures[range]
 }
-    
-function setup(){
-    noCanvas();
-    var count = select('#Timer');
-    count.html('0');
+  
+var timeRemaining = new Date().getTime() + (1000 * 2 )
+var totalTime;
+var counter = 20
+var timer;
+var minutes;
+var seconds;
+
+// var timeCalculation = function() {
+//       // Get today's date and time
+//   var now = new Date().getTime();
+
+//   // Find the totalTime between now and the count down date
+//   totalTime = timeRemaining - now;
+//   //console.log('totalTime:', totalTime)
+
+//   // Time calculations for days, hours, minutes and seconds
+//   minutes = Math.floor((totalTime % (1000 * 60 * 60)) / (1000 * 60));
+//   seconds = Math.floor((totalTime % (1000 * 60)) / 1000);
+// }
+
+
+// Update the count down every 1 second
+ var start = function() {
+    timer = setInterval(countdown, 1000)
+  // Display the result in the element with id="demo"
+  console.log('what is this div?', document)
+  document.getElementById("demo").innerHTML = `Time left: ${counter}s`
 }
+
+  // If the count down is finished, write some text and reset the game
+var countdown = function() {
+    counter--
+    if (counter === 0) {
+      document.getElementById("demo").innerHTML = "TIMES UP!!!";
+      finished();
+  }
+}
+
+var finshed = function() {
+    clearInterval(x);
+    setTimeout(function() {
+        console.log('set timeout hit within distnace check')
+        start()
+    }, 1000)
+}
+
+
+
+start();
