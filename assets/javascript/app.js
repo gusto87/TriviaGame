@@ -45,7 +45,7 @@ function check() {
     document.getElementById("picture").src = pictures[range]
 }
   
-var timeRemaining = new Date().getTime() + (1000 * 2 )
+var timeRemaining = new Date("00:00:00").getTime() + (1000 * 2 )
 var totalTime;
 var counter = 20
 var timer;
@@ -71,24 +71,26 @@ var seconds;
     timer = setInterval(countdown, 1000)
   // Display the result in the element with id="demo"
   console.log('what is this div?', document)
-  document.getElementById("demo").innerHTML = `Time left: ${counter}s`
+  
 }
 
   // If the count down is finished, write some text and reset the game
 var countdown = function() {
     counter--
-    if (counter === 0) {
+    document.getElementById("demo").innerHTML = `Time left: ${counter}s`
+    if (counter <= 0) {
       document.getElementById("demo").innerHTML = "TIMES UP!!!";
       finished();
   }
 }
 
-var finshed = function() {
-    clearInterval(x);
-    setTimeout(function() {
-        console.log('set timeout hit within distnace check')
-        start()
-    }, 1000)
+var finished = function() {
+    clearInterval(timer);
+    check();
+    /*setTimeout(function() {
+        console.log('set timeout hit within distance check')
+       ;
+    }, 1000)*/
 }
 
 
