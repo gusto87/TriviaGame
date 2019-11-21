@@ -6,4 +6,4 @@ The focus of this game is to guess the correct amount of questions to beat the g
 there are 4 questions from the early 2000s
 
 # Technologies 
-
+ Javascript, CSS, HTML
